@@ -317,13 +317,16 @@ const COLS = ['clients','fournisseurs','billets','transports','hotels','circuits
 const S = {}; COLS.forEach(c => S[c] = []);
 let CONF = {};
 let mode = 'loading', db = null, downloads = null, gotData = false;
+/* Projet Firebase dédié à cette plateforme : gestion--comptable-et-billet.
+   Les collections gardent leurs noms d'origine (clients, factures, paiements, caisse…)
+   puisque ce projet n'héberge aucune autre plateforme. */
 const FBCONF = {
-  apiKey: "AIzaSyB2Cbf9dCUuXKG2EDJtdSq5hGXim7d6qtc",
-  authDomain: "gestion-comptable-15fc9.firebaseapp.com",
-  projectId: "gestion-comptable-15fc9",
-  storageBucket: "gestion-comptable-15fc9.firebasestorage.app",
-  messagingSenderId: "191996450348",
-  appId: "1:191996450348:web:deae64816726d289ee2389"
+  apiKey: "AIzaSyCsg8c8tZiyVARs6vZJFtQ8U_ZpM1aZgDA",
+  authDomain: "gestion--comptable-et-billet.firebaseapp.com",
+  projectId: "gestion--comptable-et-billet",
+  storageBucket: "gestion--comptable-et-billet.firebasestorage.app",
+  messagingSenderId: "499323605799",
+  appId: "1:499323605799:web:68a74ea1d476b9b7d04f02"
 };
 let auth = null, me = null, started = false, canDl = true;
 const loaded = new Set();
